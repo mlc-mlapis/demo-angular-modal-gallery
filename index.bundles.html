@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+	<title>MLC DEMO of ANGULAR MODAL GALLERY - Angular 5.1.0 AOT</title>
+	<link rel="icon" href="favicon.ico" />
+	<!-- JS Libraries -->
+	<script src="node_modules/mousetrap/mousetrap.min.js" type="text/javascript"></script>
+	<script src="node_modules/hammerjs/hammer.min.js" type="text/javascript"></script>
+	<script src="node_modules/core-js/client/shim.min.js" type="text/javascript"></script>
+	<script src="node_modules/systemjs/dist/system.js" type="text/javascript"></script>
+	<script src="node_modules/zone.js/dist/zone.min.js" type="text/javascript"></script>
+	<!-- PrimeNG CSS Stylesheets -->
+	<link href="node_modules/primeng/resources/themes/pepper-grinder/theme.css" rel="stylesheet" type="text/css">
+	<link href="node_modules/primeng/resources/primeng.min.css" rel="stylesheet" type="text/css">
+	<!-- Font-Awesome CSS Stylesheets -->
+	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- SystemJS Loader Config -->
+	<script src="app/systemjs.config.bundles.js" type="text/javascript"></script>
+</head>
+<body>
+	<script>
+		System.import('app/boot.aot').catch(function(err) {
+			console.error(err);
+		});
+	</script>
+	
+	<!-- App Component -->
+	<app>Loading ...</app>
+</body>
+</html>
