@@ -1,0 +1,37 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"declaration": true,
+		"moduleResolution": "node",
+		"sourceMap": false,
+		"allowUnreachableCode": false,
+		"outDir": ".",
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"stripInternal": true,
+		"pretty": true,
+		"removeComments": true,
+		"strictNullChecks": false,
+		"noImplicitAny": false,
+		"noUnusedParameters": false,
+		"noUnusedLocals": false,
+		"skipLibCheck": true,
+		"lib": ["es5", "es2015", "dom"],
+		"typeRoots": ["./node_modules/@types"]
+	},
+	"angularCompilerOptions": {
+		"skipTemplateCodegen": false,
+		"annotationsAs": "static fields",
+		"skipMetadataEmit": false,
+		"strictMetadataEmit": true,
+		"strictInjectionParameters": true
+	},
+	"include": [
+		"./app/boot.aot.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

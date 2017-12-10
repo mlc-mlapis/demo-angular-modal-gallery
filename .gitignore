@@ -1,0 +1,9 @@
+node_modules
+app/**/*.js
+app/**/*.map
+app/**/*.d.ts
+app/**/*ngsummary.json
+!app/systemjs.config.js
+npm-debug.log
+debug.log
+.angulardoc.json
