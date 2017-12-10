@@ -3,6 +3,8 @@ The demo of using &lt;angular-modal-gallery&gt; with SystemJS loader in AOT mode
 
 The purpose of this demo is to show how to include `ModalGalleryModule` to Angular application which is compiled via `ngc` compiler and run as an app in AOT mode. It should help to solve the issue described here:  https://github.com/Ks89/angular-modal-gallery/issues/110
 
+To show the difference between `angular-modal-gallery` and `primeng` components, the `slider` PrimeNG component is included.
+
 How to run this demo:
 
 * Make a local clone of this repo
