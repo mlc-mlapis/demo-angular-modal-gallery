@@ -12,10 +12,10 @@ How to run this demo:
 * Run: `npm run tsc` for compiling the app for JIT
 * Run: `gulp serve` for runnig the app on `localhost:8081` in JIT mode
 
-console.log.jit.png
+![console.log for JIT](./console.log.jit.png)
 
 **For AOT:**
 * Run: `npm run ngc` for compiling the app for AOT
 * Run: `gulp serve:aot` for runnig the app on `localhost:8080` in AOT mode
 
-console.log.aot.png
+![console.log for AOT](./console.log.aot.png)
