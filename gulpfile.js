@@ -2,6 +2,8 @@
 
 var gulp = require('gulp'),
 	server = require('gulp-server-livereload'),
+	rename = require('gulp-rename'),
+	intercept = require('gulp-intercept'),
 	systemjsbuilder = require("systemjs-builder");
 
 // >>> GULP TASK to run app's standalone web server for JIT app
@@ -89,6 +91,35 @@ gulp.task('rxjs', function() {
 });
 // <<< GULP TASK to create the RxJS re-bundle
 
+// >>> GULP TASK to eliminate decorators from packages' JS for pure AOT app
+gulp.task('removing-decorators-from-packages', function() {
+
+	var packagesRoot = './node_modules';
+	var paths = {
+		jsSource: [
+			packagesRoot + '/**/angular-modal-gallery/bundles/angular-modal-gallery.umd.js'
+		],
+		jsOutput: packagesRoot
+	};
+
+	return gulp.src(paths.jsSource)
+		.pipe(intercept(function(file) {
+			var decoratorsRegex = /(.*\.decorators\s{0,}=\s{0,}\[[\s\S]*?\]\s{0,};\s{0,}(\r\n|\n))/gm;
+			var codeSource = file.contents.toString();
+			file.contents = new Buffer(codeSource.replace(/(.*\.decorators\s{0,}=\s{0,}\[[\s\S]*?\]\s{0,};\s{0,}(\r\n|\n))/gm, ''));
+			return file;
+		}))
+		.pipe(rename(function (path) {
+			var parts = path.basename.split('.');
+			var baseBundleName = parts[0];
+			baseBundleName = baseBundleName + '.' + 'aot';
+			parts[0] = baseBundleName;
+			path.basename = parts.join('.');
+		}))
+		.pipe(gulp.dest(paths.jsOutput));
+});
+// <<< GULP TASK to eliminate decorators from packages' JS for pure AOT app
+
 // >>> GULP TASK to create app's JS bundles with AOT
 gulp.task('bundles:aot', function() {
 	var options = {
@@ -112,6 +143,20 @@ gulp.task('bundles:aot', function() {
 		'[node_modules/primeng/components/dom/domhandler.js] + ' +
 		'[node_modules/primeng/components/slider/*.js]',
 		'app-bundles/primeng.bundle.aot.min.js',
+		options
+	);
+
+	builder.bundle(
+		'[node_modules/primeng/components/dom/domhandler.js] + ' +
+		'[node_modules/primeng/components/slider/*.js]',
+		'app-bundles/packages/primeng.bundle.aot.min.js',
+		options
+	);
+
+	builder.bundle(
+		'[node_modules/angular-modal-gallery/bundles/angular-modal-gallery.aot.umd.js] + ' +
+		'[node_modules/angular-modal-gallery/angular-modal-gallery.ngfactory.js]',
+		'app-bundles/packages/angular-modal-gallery.bundle.aot.min.js',
 		options
 	);
 

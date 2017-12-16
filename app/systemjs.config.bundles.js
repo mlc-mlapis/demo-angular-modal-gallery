@@ -37,8 +37,11 @@ System.config({
 			"app/app.module.*",
 			"app/boot.aot.*"
 		],
-		"app-bundles/primeng.bundle.aot.min.js": [
+		"app-bundles/packages/primeng.bundle.aot.min.js": [
 			"node_modules/primeng/*"
+		],
+		"app-bundles/packages/angular-modal-gallery.bundle.aot.min.js": [
+			"node_modules/angular-modal-gallery/*"
 		]
 	},
 	packages: {
@@ -50,7 +53,7 @@ System.config({
 			defaultExtension: 'js'
 		},
 		'angular-modal-gallery': {
-			main: 'bundles/angular-modal-gallery.umd.min.js',
+			main: 'bundles/angular-modal-gallery.aot.umd.js',
 			defaultExtension: 'js'
 		},
 		'zone-patch-rxjs': {
