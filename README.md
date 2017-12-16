@@ -47,5 +47,6 @@ If an application is using SystemJS loader and setting for ES5/CJS modules then 
 
 ![console.log for BUNDLED AOT](./console.log.bundles.packages.png)
 
-The previous status without bundling of `angular-modal-gallery` package
+The previous status without bundling of `angular-modal-gallery` package:
+
 ![console.log for BUNDLED AOT](./console.log.bundles.png)
