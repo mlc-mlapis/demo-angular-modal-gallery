@@ -18,7 +18,7 @@ After more deep understanding how `angular-modal-gallery` lib is built using `ng
 Compiling `angular-modal-gallery` with options `flatModuleId` and `flatModuleOutFile` using `ng-packagr` creates a single flattened UMD JS file -> `bundles\angular-modal-gallery.umd.js` (ES5/UMD) for JIT mode and also `angular-modal-gallery.js` (ES6/ES2015), `angular-modal-gallery.metadata.json`, `angular-modal-gallery.ngsummary.json` which are published resources for AOT compilation in a context of a whole Angular application (its configuration) which uses this lib.
 
 If an application is using SystemJS loader and setting for ES5/CJS modules then it is possible to do the following steps:
-* Run: `npm run ngc` for compiling the app for AOT and this step also cretes `angular-modal-gallery.ngfactory.js` (ES5/CJS) file in `node_modules\angular-modal-gallery` directory.
+* Run: `npm run ngc` for compiling the app for AOT and this step also creates `angular-modal-gallery.ngfactory.js` (ES5/CJS) file in `node_modules\angular-modal-gallery` directory.
 * Run: `gulp removing-decorators-from-packages` for elimination of JIT decorators from `bundles\angular-modal-gallery.umd.js` whic are not necessary for run-time of the application in AOT mode. This step creates the new file `bundles\angular-modal-gallery.aot.umd.js` instead of re-writing the original one.
 * Run: `gulp bundles:aot` for creating bundles of the app for AOT which includes also a new single bundle that includes `bundles\angular-modal-gallery.aot.umd.js` and `angular-modal-gallery.ngfactory.js` files and this bundle is mapped in `systemjs.config.bundles.js`, so an app can load only one single bundle for all parts of `angular-modal-gallery` package resources.
 
