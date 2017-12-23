@@ -134,15 +134,8 @@ gulp.task('bundles:aot', function() {
 	var builder = new systemjsbuilder('.');
 
 	builder.bundle(
-		'[app/**/*.js] - [app/boot.js] - [app/systemjs.config.js]',
+		'[app/**/*.js] - [app/boot.js] - [app/boot.parcel.js] - [app/boot.parcel.aot.js] - [app/systemjs.config.js]',
 		'app-bundles/app.bundle.aot.min.js',
-		options
-	);
-
-	builder.bundle(
-		'[node_modules/primeng/components/dom/domhandler.js] + ' +
-		'[node_modules/primeng/components/slider/*.js]',
-		'app-bundles/primeng.bundle.aot.min.js',
 		options
 	);
 

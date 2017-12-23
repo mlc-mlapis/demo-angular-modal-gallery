@@ -50,3 +50,10 @@ If an application is using SystemJS loader and setting for ES5/CJS modules then 
 The previous status without bundling of `angular-modal-gallery` package:
 
 ![console.log for BUNDLED AOT](./console.log.bundles.png)
+
+**UPDATE 2017-12-23**
+
+Because of the latest development shift in `parcel-bundler` related to the new `parcel-plugin-typescript` some additional tasks were added to confirm possibilities to create Angular applications bundles.
+
+* Run: `npm run parcel` for bundling from JIT `platformBrowserDynamic()`
+* Run: `npm run parcel.aot` for bundling from AOT `platformBrowser()`

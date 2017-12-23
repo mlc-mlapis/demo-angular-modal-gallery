@@ -9,3 +9,5 @@ package-lock.json
 npm-debug.log
 debug.log
 .angulardoc.json
+.cache
+dist
