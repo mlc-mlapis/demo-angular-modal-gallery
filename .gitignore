@@ -6,6 +6,7 @@ app/**/*ngsummary.json
 !app/systemjs.config.js
 !systemjs.config.bundles.js
 package-lock.json
+yarn.lock
 npm-debug.log
 debug.log
 .angulardoc.json

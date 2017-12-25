@@ -1,4 +1,5 @@
 {
+	"compileOnSave": false,
 	"compilerOptions": {
 		"target": "es5",
 		"module": "commonjs",
@@ -6,6 +7,7 @@
 		"moduleResolution": "node",
 		"sourceMap": false,
 		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
 		"outDir": "./app",
 		"allowSyntheticDefaultImports": true,
 		"emitDecoratorMetadata": true,
@@ -15,17 +17,24 @@
 		"removeComments": true,
 		"strictNullChecks": false,
 		"noImplicitAny": false,
+		"noImplicitReturns": true,
+		"noImplicitUseStrict": false,
+		"noFallthroughCasesInSwitch": true,
 		"noUnusedParameters": false,
 		"noUnusedLocals": false,
 		"skipLibCheck": true,
+		"noLib": false,
 		"lib": ["es5", "es2015", "dom"],
 		"typeRoots": ["./node_modules/@types"]
 	},
 	"include": [
-		"./app/boot.ts"
+		"app/boot.ts"
 	],
 	"exclude": [
-		"node_modules"
+		"node_modules",
+		"app/boot.aot.ts",
+		"app/boot.parcel.ts",
+		"app/boot.parcel.aot.ts"
 	],
 	"parcelTsPluginOptions": {
 		"transpileOnly": false,

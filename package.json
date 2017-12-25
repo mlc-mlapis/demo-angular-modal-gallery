@@ -8,7 +8,6 @@
 		"ngc": "./node_modules/.bin/ngc -p tsconfig.aot.json",
 		"parcel": "./node_modules/.bin/parcel index.parcel.html",
 		"parcel.aot": "./node_modules/.bin/parcel index.parcel.aot.html"
-		
 	},
 	"dependencies": {
 		"@angular/animations": "5.1.2",
@@ -41,6 +40,7 @@
 		"@types/jasmine": "2.8.2",
 		"@types/mousetrap": "1.5.34",
 		"@types/node": "8.5.2",
+		"@types/systemjs": "0.20.6",
 		"gulp": "3.9.1",
 		"gulp-intercept": "0.1.0",
 		"gulp-rename": "1.2.2",
