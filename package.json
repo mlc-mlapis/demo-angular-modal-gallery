@@ -1,6 +1,6 @@
 {
 	"name": "demo-angular-modal-gallery",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"private": false,
 	"license": "MIT",
 	"scripts": {
@@ -10,21 +10,21 @@
 		"parcel.aot": "./node_modules/.bin/parcel index.parcel.aot.html"
 	},
 	"dependencies": {
-		"@angular/animations": "5.1.2",
-		"@angular/common": "5.1.2",
-		"@angular/compiler": "5.1.2",
-		"@angular/compiler-cli": "5.1.2",
-		"@angular/core": "5.1.2",
-		"@angular/forms": "5.1.2",
-		"@angular/http": "5.1.2",
-		"@angular/language-service": "5.1.2",
-		"@angular/platform-browser": "5.1.2",
-		"@angular/platform-browser-dynamic": "5.1.2",
-		"@angular/platform-server": "5.1.2",
-		"@angular/platform-webworker": "5.1.2",
-		"@angular/platform-webworker-dynamic": "5.1.2",
-		"@angular/router": "5.1.2",
-		"@angular/service-worker": "5.1.2",
+		"@angular/animations": "5.2.2",
+		"@angular/common": "5.2.2",
+		"@angular/compiler": "5.2.2",
+		"@angular/compiler-cli": "5.2.2",
+		"@angular/core": "5.2.2",
+		"@angular/forms": "5.2.2",
+		"@angular/http": "5.2.2",
+		"@angular/language-service": "5.2.2",
+		"@angular/platform-browser": "5.2.2",
+		"@angular/platform-browser-dynamic": "5.2.2",
+		"@angular/platform-server": "5.2.2",
+		"@angular/platform-webworker": "5.2.2",
+		"@angular/platform-webworker-dynamic": "5.2.2",
+		"@angular/router": "5.2.2",
+		"@angular/service-worker": "5.2.2",
 		"angular-modal-gallery": "4.0.1",
 		"core-js": "2.5.3",
 		"font-awesome": "4.7.0",
@@ -33,21 +33,21 @@
 		"primeng": "5.0.2",
 		"rxjs": "5.5.6",
 		"systemjs": "0.20.19",
-		"zone.js": "0.8.18"
+		"zone.js": "0.8.20"
 	},
 	"devDependencies": {
 		"@types/hammerjs": "2.0.35",
-		"@types/jasmine": "2.8.2",
-		"@types/mousetrap": "1.5.34",
-		"@types/node": "8.5.2",
+		"@types/jasmine": "2.8.6",
+		"@types/mousetrap": "1.6.0",
+		"@types/node": "9.4.0",
 		"@types/systemjs": "0.20.6",
 		"gulp": "3.9.1",
 		"gulp-intercept": "0.1.0",
 		"gulp-rename": "1.2.2",
 		"gulp-server-livereload": "1.9.2",
-		"parcel-bundler": "1.3.0",
-		"parcel-plugin-typescript": "0.3.0",
+		"parcel-bundler": "1.5.1",
+		"parcel-plugin-typescript": "0.5.3",
 		"systemjs-builder": "0.16.12",
-		"typescript": "2.5.3"
+		"typescript": "2.6.2"
 	}
 }
